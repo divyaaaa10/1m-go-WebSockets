@@ -30,8 +30,8 @@ func handleConnection(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 
-		atomic.AddUint64(&reqCounter, 1)                  // Increment request count
-		atomic.AddUint64(&dataSent, uint64(len(message))) // Track total data sent
+		atomic.AddUint64(&reqCounter, 1)
+		atomic.AddUint64(&dataSent, uint64(len(message)))
 	}
 }
 
@@ -48,4 +48,3 @@ func main() {
 	log.Println("WebSocket server listening on ws://localhost:8080/ws")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-

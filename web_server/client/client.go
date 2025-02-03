@@ -16,8 +16,8 @@ func main() {
 	}
 	defer conn.Close()
 
-	// Send 1.8 million messages in half an hour
-	for i := 0; i < 1800000; i++ {
+	// Send 1 million messages in half an hour
+	for i := 0; i < 1000000; i++ {
 		// Send a message to the WebSocket server
 		err := conn.WriteMessage(websocket.TextMessage, []byte(fmt.Sprintf("Message %d", i)))
 		if err != nil {
