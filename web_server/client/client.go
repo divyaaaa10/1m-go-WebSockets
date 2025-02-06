@@ -25,10 +25,8 @@ func main() {
 			return
 		}
 
-		// Sleep for a fraction of a second to match 1000 requests per second
-		time.Sleep(time.Millisecond) // 1000 requests per second
+		time.Sleep(time.Millisecond)
 
-		// Optionally, read the response from the server
 		_, msg, err := conn.ReadMessage()
 		if err != nil {
 			log.Println("Error reading message:", err)

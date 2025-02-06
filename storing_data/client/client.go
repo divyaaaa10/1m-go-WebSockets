@@ -30,7 +30,6 @@ func main() {
 
 	log.Println("Connected to server at", serverAddr)
 
-	// Send data every second for 30 minutes (1800 seconds)
 	for i := 0; i < 10; i++ {
 		data := generateRandomData(1024) // 1KB of data
 
